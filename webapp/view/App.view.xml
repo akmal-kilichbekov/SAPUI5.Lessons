@@ -1,13 +1,20 @@
 <mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="rroot.controller.App">
 	<Carousel>
 		<pages>
-			<Image src="https://upload.wikimedia.org/wikipedia/commons/9/9f/GEO_Globe.jpg" height="600px"/>
+			<Image src="http://theworldnewsproject.com/wp-content/uploads/2017/10/iStock-Destination-Zurich.jpg" height="400px"/>
 			<Image
-				src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Wikipedia_ Hello_World_Graphic.svg/2000px-Wikipedia_Hello_World_Graphic.svg.png"
-				height="600px"/>
+				src="https://cdn.zuerich.com/sites/default/files/styles/sharing/public/web_zurich_tt_sightseeing_fraumuenster_1600x900.jpg?itok=n-bkHlud"
+				height="400px"/>
 		</pages>
 	</Carousel>
-	<Button text="Display message"
-	        press="onPress">
-	</Button>
+	<Button text="Display message" press="onPress"></Button>
+	<Input value="Input the name" width="300px"/>
+	<VBox >
+		<CheckBox text="SAPUI5" selected="true"/>
+		<CheckBox text="SAP FIORI"/>
+	</VBox>
+	<VBox>
+		<RadioButton groupName="GroupA" text="Male" selected="true"/>
+		<RadioButton groupName="GroupA" text="Female"/>
+	</VBox>
 </mvc:View>

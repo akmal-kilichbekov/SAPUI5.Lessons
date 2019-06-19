@@ -16,11 +16,11 @@
 		}'>
 		</script>
 		<script>
-			sap.ui.getCore().attachInit(function () {
-			sap.ui.xmlview({
-				viewName: "rroot.view.App"
-				}).placeAt("content");
-			});
+		sap.ui.getCore().attachInit(function () {
+			new sap.ui.core.ComponentContainer({
+			name : "rroot"
+			}).placeAt("content");
+		});
 		</script>
 	</head>
 	<body class="sapUiBody" id="content">

@@ -7,7 +7,7 @@
 				height="400px"/>
 		</pages>
 	</Carousel>
-	<Button text="Display message" press="onPress"></Button>
+	<Button text="{i18n>buttonText}" press="onPress"></Button>
 	<Input value="Input the name" width="300px"/>
 	<VBox >
 		<CheckBox text="SAPUI5" selected="true"/>

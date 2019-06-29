@@ -1,20 +1,50 @@
 <mvc:View displayBlock="true" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="rroot.controller.App">
-	<Carousel>
-		<pages>
-			<Image src="http://theworldnewsproject.com/wp-content/uploads/2017/10/iStock-Destination-Zurich.jpg" height="400px"/>
-			<Image
-				src="https://cdn.zuerich.com/sites/default/files/styles/sharing/public/web_zurich_tt_sightseeing_fraumuenster_1600x900.jpg?itok=n-bkHlud"
-				height="400px"/>
-		</pages>
-	</Carousel>
-	<Button text="{i18n>buttonText}" press="onPress"></Button>
-	<Input value="Input the name" width="300px"/>
-	<VBox >
-		<CheckBox text="SAPUI5" selected="true"/>
-		<CheckBox text="SAP FIORI"/>
-	</VBox>
-	<VBox>
-		<RadioButton groupName="GroupA" text="Male" selected="true"/>
-		<RadioButton groupName="GroupA" text="Female"/>
-	</VBox>
+	<Shell>
+		<App>
+			<pages>
+				<Page>
+					<Panel class="sapUiResponsiveMargin">
+						<content>
+							<Button text="{i18n>ButtonModel}" press=".onClick"></Button>
+							<Input id="inputID" value="{jsonGet>/name}" description="Written: {jsonGet>/name}" valueLiveUpdate="true" width="50%"/>
+						</content>
+						<content>
+							<Carousel>
+								<pages>
+									<Image src="http://theworldnewsproject.com/wp-content/uploads/2017/10/iStock-Destination-Zurich.jpg" height="400px"/>
+									<Image
+										src="https://cdn.zuerich.com/sites/default/files/styles/sharing/public/web_zurich_tt_sightseeing_fraumuenster_1600x900.jpg?itok=n-bkHlud"
+										height="400px"/>
+								</pages>
+							</Carousel>
+							<Button text="{i18n>buttonText}" press=".onPress"></Button>
+							<Input value="Input the name" width="300px"/>
+							<VBox >
+								<CheckBox text="SAPUI5" selected="true"/>
+								<CheckBox text="SAP FIORI"/>
+							</VBox>
+							<VBox>
+								<RadioButton groupName="GroupA" text="Male" selected="true"/>
+								<RadioButton groupName="GroupA" text="Female"/>
+							</VBox>
+						</content>
+					</Panel>
+					<content>
+						<List id="invoiceList" class="sapUiResponsiveMargin" width="auto" items="{invoice>/Invoices}">
+							<headerToolbar>
+								<Toolbar>
+									<Title text="{i18n>invoiceListTitle}"/>
+									<ToolbarSpacer/>
+									<SearchField width="50%" search=".onFilterInvoices"/>
+								</Toolbar>
+							</headerToolbar>
+							<items>
+								<ObjectListItem title="{invoice>Quantity} x {invoice>ProductName}"/>
+							</items>
+						</List>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
 </mvc:View>

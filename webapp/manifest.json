@@ -19,9 +19,7 @@
 			"tablet": true,
 			"phone": true
 		},
-		"supportedThemes": [
-			"sap_bluecrystal"
-		]
+		"supportedThemes": ["sap_bluecrystal"]
 	},
 	"sap.ui5": {
 		"_version": "1.2.0",
@@ -55,6 +53,10 @@
 				"settings": {
 					"bundleName": "rroot.i18n.i18n"
 				}
+			},
+			"invoice": {
+				"type": "sap.ui.model.json.JSONModel",
+				"uri": "model/Invoice.json"
 			}
 		}
 	}
